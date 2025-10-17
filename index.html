@@ -3,109 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamna Mughal | Connectivity Researcher & Game Developer</title>
-
-  <!-- TailwindCSS CDN -->
+  <title>Hamna Mughal | Computer Engineer & Researcher</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Tailwind Configuration -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#4F46E5',
-            secondary: '#9333EA',
-          },
-          animation: {
-            fadeIn: 'fadeIn 1.5s ease-in-out',
-            slideUp: 'slideUp 1s ease-in-out',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: 0 },
-              '100%': { opacity: 1 },
-            },
-            slideUp: {
-              '0%': { transform: 'translateY(20px)', opacity: 0 },
-              '100%': { transform: 'translateY(0)', opacity: 1 },
-            },
-          },
-        }
-      }
-    }
-  </script>
-
-  <!-- Custom CSS (for additional animations or effects) -->
-  <link rel="stylesheet" href="style.css" />
-
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+  <!-- ✅ External advanced animation CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all duration-500">
-  <div class="max-w-5xl mx-auto p-6 animate-fadeIn">
+<body class="bg-gray-50 text-gray-800 relative overflow-x-hidden">
+  <div class="max-w-5xl mx-auto p-6">
 
     <!-- Header -->
-    <header class="text-center mb-10 animate-slideUp">
-      <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 shadow-xl text-white hover:shadow-2xl transition-all duration-300">
-        <h1 class="text-5xl font-extrabold tracking-wide">Hamna Mughal</h1>
-        <p class="text-lg mt-3 font-medium">Connectivity Researcher | Game Developer | GenAI Enthusiast</p>
-        <p class="mt-4 space-x-3">
-          <a href="mailto:hamnamughalofficial@gmail.com" class="hover:underline">📧 hamnamughalofficial@gmail.com</a> |
-          <a href="https://github.com/hamnamgl" target="_blank" class="hover:underline">🐙 GitHub</a> |
-          <a href="https://www.linkedin.com/in/hamnamughal" target="_blank" class="hover:underline">🔗 LinkedIn</a>
-        </p>
-      </div>
-
-      <!-- Dark Mode Toggle -->
-      <button id="theme-toggle" class="mt-5 px-4 py-2 bg-gray-200 dark:bg-gray-800 text-sm rounded-xl hover:bg-gray-300 dark:hover:bg-gray-700 transition">
-        🌙 Toggle Dark Mode
-      </button>
+    <header class="text-center mb-10 fade-in">
+      <h1 class="text-4xl font-bold gradient-text">Hamna Mughal</h1>
+      <p class="text-lg mt-2 font-medium">Computer Engineer | Researcher | AI Enthusiast</p>
+      <p class="mt-2">
+        <a href="mailto:hamnamughalofficial@gmail.com" class="text-indigo-600 hover:underline">hamnamughalofficial@gmail.com</a> |
+        <a href="https://github.com/hamnamughal" target="_blank" class="text-indigo-600 hover:underline">github.com/hamnamughal</a>
+      </p>
     </header>
 
-    <!-- All Resume Sections (unchanged content, but with animation classes) -->
-    <section class="mb-10 animate-slideUp">
-      <h2 class="text-2xl font-semibold text-primary border-b-2 border-indigo-200 pb-1 mb-4">Objective</h2>
-      <p class="leading-relaxed">To dedicate my engineering skills toward building ethical, efficient, and human-centered technologies that positively impact humanity.</p>
+    <!-- Objective -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Objective</h2>
+      <p>To dedicate my engineering skills toward building ethical, efficient, and human-centered technologies that positively impact humanity.</p>
     </section>
 
-    <!-- You can keep adding animate-slideUp class to each section for smooth reveal -->
-    <!-- Example for Research Interests -->
-    <section class="mb-10 animate-slideUp">
-      <h2 class="text-2xl font-semibold text-primary border-b-2 border-indigo-200 pb-1 mb-4">Research Interests</h2>
-      <ul class="list-disc ml-6 space-y-1 leading-relaxed">
-        <li><strong>Wireless Communication Systems:</strong> Li-Fi Technology, 5G/6G, networks, low-latency communication, and energy efficiency.</li>
+    <!-- Research Interests -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Research Interests</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li><strong>Wireless Communication Systems:</strong> Li-Fi Technology, 5G/6G technologies, computer networks, low-latency communication, energy-efficiency, and wireless body area networks.</li>
         <li><strong>Embedded AI:</strong> Edge intelligence and real-time data processing.</li>
         <li><strong>Applications:</strong> Healthcare and Gaming.</li>
       </ul>
     </section>
 
-    <!-- You can keep the rest of your sections same as before -->
-    <!-- Just keep adding the class "animate-slideUp" to each main section for a modern fade animation -->
+    <!-- Education -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Education</h2>
+      <div class="bg-white p-4 rounded-2xl shadow">
+        <h3 class="text-xl font-bold">Bachelor of Science in Computer Engineering</h3>
+        <p class="italic">COMSATS University Islamabad, Attock Campus (Sep 2020 – Jul 2024)</p>
+        <p>CGPA: 3.20 / 4.00</p>
+      </div>
+    </section>
+
+    <!-- Patents & Publications -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Patents and Publications</h2>
+      <ul class="list-disc ml-6 space-y-3">
+        <li><strong>[C.1]</strong> Hamna Mughal, et al. (2024). <em>Optimizing Data Transfer in Hospitals using Li-Fi Technology.</em> Presented at ICCIS 2024, Kohat University of Science and Technology (Springer Proceedings, Book Chapter 5).</li>
+        <li><strong>[C.2]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Terahertz Communication’s Future Potential for Impacting Telemedicine: A Visionary Perspective.</em> To be presented at C-CODE 2025.</li>
+        <li><strong>[S.1]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Li-Fi in the 6G Era: Exploring Opportunities, Challenges, and the Role of Advanced Multiplexing Techniques.</em> Under review at ICIC 2025.</li>
+        <li><strong>[S.2]</strong> Hamna Mughal, et al. (2025). <em>Integrating Wi-Fi 7 and Edge AI for Intelligent and Performance Optimized Esports Environments.</em> Under review at Entertainment Computing (Elsevier).</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Projects</h2>
+      <div class="bg-white p-4 rounded-2xl shadow space-y-2">
+        <h3 class="font-bold">Optimizing Data Transfer in Hospitals using Li-Fi Technology (2023–2024)</h3>
+        <p><strong>Tools:</strong> Arduino Uno/Mega, Sensors, Arduino IDE, OMNeT++, MATLAB, Tinkercad, LaTeX, Microsoft Project, Draw.io</p>
+        <ul class="list-disc ml-6 space-y-1">
+          <li>Designed and implemented a Li-Fi based healthcare communication system to enhance data transfer speed and reliability.</li>
+          <li>Integrated sensors with Arduino microcontrollers (UNO/Mega) using UART protocol.</li>
+          <li>Applied SVD precoding and OOK keying for improved modulation efficiency and secure communication.</li>
+          <li>Simulated and validated system performance in OMNeT++ and MATLAB.</li>
+          <li>Prototype circuit designs with renewable solar power support.</li>
+          <li>Selected for NGIRI Ignite and PEC FYDP Funding; successfully tested at District Hospital Attock City.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <ul class="list-disc ml-6">
+          <li><strong>Programming:</strong> C/C++, Python, Embedded C, C#, MATLAB</li>
+          <li><strong>Databases:</strong> MySQL, SQL</li>
+          <li><strong>Embedded & Simulation:</strong> Arduino IDE, OMNeT++, NS-3, Cisco Packet Tracer, Tinkercad</li>
+        </ul>
+        <ul class="list-disc ml-6">
+          <li><strong>Software & Tools:</strong> Unity, LaTeX, Microsoft Project, Trello, Jira, Canva, Draw.io</li>
+          <li><strong>Operating Systems:</strong> Linux (Basic)</li>
+          <li><strong>Research Skills:</strong> Observation, Data Analysis, Technical Documentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Experience</h2>
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="font-bold">Researcher & Developer — Visyra</h3>
+          <p class="italic">Apr 2025 – Present | Islamabad, Pakistan (Remote)</p>
+          <p>Working on a Multi-Agent System project involving AI agents and social technologies.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="font-bold">Research Internship — AI-Explain You Science</h3>
+          <p class="italic">Sep 2024 – Mar 2025 | Tunisia (Remote)</p>
+          <p>Conducted literature reviews, managed databases, and supported AI and wireless technology projects.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="font-bold">Information Analyst Intern — MyUpdates24</h3>
+          <p class="italic">Sep 2024 – Oct 2024 | Delhi, India (Remote)</p>
+          <p>Analyzed qualitative data, generated insights, and collaborated with cross-functional teams.</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow">
+          <h3 class="font-bold">AI/ML Fellowship — ACM UET Lahore</h3>
+          <p class="italic">Jul 2024 – Aug 2024 | Lahore, Pakistan (Remote)</p>
+          <p>Hands-on experience in AI and ML projects; gained professional mentorship.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honors and Awards -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Honors and Awards</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>FYDP & IGNITE Funding (2024–2025):</strong> Selected for PEC/NGIRI funding; tested successfully at District Hospital Attock City.</li>
+        <li><strong>Younger Researcher Award (Oct 2024):</strong> 2nd ICETI, AIEYS.</li>
+        <li><strong>Certificate of Appreciation (Dec 2024):</strong> ICCIS 2024 Presenter.</li>
+        <li><strong>AI Seekho Season 6 - Swags Winner (Mar 2025):</strong> Google Cloud Pakistan.</li>
+        <li><strong>Registered Engineer (Nov 2024):</strong> Pakistan Engineering Council.</li>
+      </ul>
+    </section>
+
+    <!-- Leadership -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Leadership & Community</h2>
+      <ul class="list-disc ml-6 space-y-2">
+        <li><strong>Facilitator Board Member & Ambassador:</strong> AWS Cloud Club Pakistan, Web3 Pak (Aug 2024 – Present)</li>
+        <li><strong>Media & Marketing Team Lead:</strong> YES COMSATS & ACM UET Lahore (Jan – May 2024)</li>
+        <li><strong>Video Editor & Executive Team Member:</strong> Tech Hierarchy & Dr Coders (Feb – Aug 2024)</li>
+        <li><strong>Contributor:</strong> GirlScript Summer of Code (Oct 2024 – Feb 2025)</li>
+        <li><strong>Volunteer:</strong> Dev Jirga (Sep – Nov 2024)</li>
+      </ul>
+    </section>
+
+    <!-- Certifications -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Certifications</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>Generative AI Application Developer — Pakistan Engineering Council (Jun 2025)</li>
+        <li>Introduction to Internet of Things — Stanford Online (Feb 2025)</li>
+        <li>Foundations of IoT Systems & Industrial Automation — LearnQuest (Jan 2025)</li>
+        <li>Integrating Generative AI in Healthcare Innovations — IEEE EMBS SAC (Sep 2024)</li>
+        <li>Google Soft Skills Program — PAFLA (Jul 2024)</li>
+        <li>Generative AI for Everyone — DeepLearning.AI (Jan 2024)</li>
+      </ul>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="mb-10 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Additional Information</h2>
+      <p><strong>Languages:</strong> English (Working Proficiency), Urdu (Native), German (Elementary)</p>
+      <p><strong>Interests:</strong> Game Development, Cybersecurity, Social Science × Technology, Generative AI</p>
+    </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 dark:text-gray-400 text-sm mt-10 pb-4 animate-fadeIn">
-      © 2025 Hamna Mughal | Built with TailwindCSS & Custom Animations
+    <footer class="text-center text-gray-500 text-sm mt-10 pb-4 fade-in">
+      © 2025 Hamna Mughal | Built with TailwindCSS
     </footer>
-
   </div>
 
-  <!-- Theme Toggle Script -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    toggle.addEventListener('click', () => html.classList.toggle('dark'));
+  <!-- ✨ Floating Animated Download Button -->
+  <a href="Hamna_Mughal_Resume.pdf" download class="floating-btn">📄 Download Resume</a>
 
-    // Reveal animation on scroll
-    const observer = new IntersectionObserver((entries) => {
+  <!-- ✨ Intersection Observer Scroll Animation -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-slideUp');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('show');
       });
-    });
-    document.querySelectorAll('section').forEach(section => observer.observe(section));
+    }, { threshold: 0.2 });
+    document.querySelectorAll('section, header, footer').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>

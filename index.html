@@ -3,24 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hamna Mughal | Computer Engineer & Researcher</title>
+  <title>Hamna Mughal | Gamer & Developer | Connectivity Researcher</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-  <!-- ✅ External advanced animation CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- 🔥 Inline CSS for animations, dark mode, and glowing button -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { transition: background 0.5s, color 0.5s; }
+    .dark-mode { background-color: #111827; color: #f3f4f6; }
+
+    /* Fade-in and show animation */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
+    .show { opacity: 1; transform: translateY(0); }
+
+    /* Gradient text for name */
+    .gradient-text {
+      background: linear-gradient(90deg, #4F46E5, #9333EA, #EC4899);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 5s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0%; }
+      100% { background-position: 100%; }
+    }
+
+    /* Floating glowing resume button */
+    .floating-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(90deg, #4F46E5, #9333EA);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+      font-weight: 500;
+      transition: all 0.4s ease;
+      animation: pulseGlow 2s infinite alternate;
+      z-index: 50;
+    }
+    .floating-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(147, 51, 234, 0.9);
+    }
+    @keyframes pulseGlow {
+      from { box-shadow: 0 0 10px rgba(147, 51, 234, 0.5); }
+      to { box-shadow: 0 0 25px rgba(147, 51, 234, 1); }
+    }
+
+    /* Dark/light mode toggle button */
+    .theme-toggle {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: linear-gradient(90deg, #9333EA, #4F46E5);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 0 15px rgba(79, 70, 229, 0.6);
+      transition: all 0.3s ease;
+      z-index: 50;
+    }
+    .theme-toggle:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(79, 70, 229, 1);
+    }
+
+    /* Card hover glow */
+    div.bg-white:hover, div.dark\:bg-gray-800:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(147, 51, 234, 0.25);
+      transition: all 0.4s ease;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 relative overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 relative overflow-x-hidden transition-all duration-500">
   <div class="max-w-5xl mx-auto p-6">
 
     <!-- Header -->
     <header class="text-center mb-10 fade-in">
       <h1 class="text-4xl font-bold gradient-text">Hamna Mughal</h1>
-      <p class="text-lg mt-2 font-medium">Computer Engineer | Researcher | AI Enthusiast</p>
-      <p class="mt-2">
-        <a href="mailto:hamnamughalofficial@gmail.com" class="text-indigo-600 hover:underline">hamnamughalofficial@gmail.com</a> |
-        <a href="https://github.com/hamnamughal" target="_blank" class="text-indigo-600 hover:underline">github.com/hamnamughal</a>
+      <p class="text-lg mt-2 font-medium">Gamer & Developer | Connectivity Researcher | Gen AI Enthusiast</p>
+      <p class="mt-2 space-x-2">
+        <a href="mailto:hamnamughalofficial@gmail.com" class="text-indigo-600 hover:underline">📧 hamnamughalofficial@gmail.com</a> |
+        <a href="https://github.com/hamnamgl" target="_blank" class="text-indigo-600 hover:underline">🐙 GitHub</a> |
+        <a href="https://www.linkedin.com/in/hamnamughal" target="_blank" class="text-indigo-600 hover:underline">🔗 LinkedIn</a>
       </p>
     </header>
 
@@ -172,10 +245,13 @@
     </footer>
   </div>
 
-  <!-- ✨ Floating Animated Download Button -->
+  <!-- 🌙 Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+
+  <!-- 📄 Floating Download Resume Button -->
   <a href="Hamna_Mughal_Resume.pdf" download class="floating-btn">📄 Download Resume</a>
 
-  <!-- ✨ Intersection Observer Scroll Animation -->
+  <!-- ✨ Scroll Animation Script -->
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -183,7 +259,14 @@
       });
     }, { threshold: 0.2 });
     document.querySelectorAll('section, header, footer').forEach(el => observer.observe(el));
-  </script>
 
+    // 🌗 Dark Mode Toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 </body>
 </html>

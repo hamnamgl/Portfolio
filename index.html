@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hamna Mughal | Computer Engineer & Researcher</title>
+  <title>Hamna Mughal | Connectivity Researcher | Game Developer | GenAI Enthusiast</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
+  <!-- Inline styles & animations (self-contained) -->
   <style>
-    /* Basic */
     html { scroll-behavior: smooth; }
     body { transition: background 0.35s ease, color 0.35s ease; }
-
-    /* Fade-in for sections */
-    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
     .show { opacity: 1; transform: translateY(0); }
 
-    /* Animated gradient name */
+    /* animated gradient name */
     .gradient-text {
       background: linear-gradient(90deg,#4F46E5,#9333EA,#EC4899);
       background-size: 200% 200%;
@@ -24,74 +24,64 @@
       -webkit-text-fill-color: transparent;
       animation: gradientMove 6s linear infinite;
     }
-    @keyframes gradientMove { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    @keyframes gradientMove { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
 
-    /* Floating buttons */
+    /* Floating Download button */
     .floating-btn {
-      position: fixed; right: 26px; bottom: 26px;
-      padding: 12px 20px; border-radius: 999px;
+      position: fixed; right: 28px; bottom: 28px;
+      padding: 12px 22px; border-radius: 999px;
       background: linear-gradient(90deg,#4F46E5,#9333EA);
       color: #fff; font-weight:600; z-index:60;
-      box-shadow: 0 8px 28px rgba(79,70,229,0.18);
+      box-shadow: 0 10px 30px rgba(79,70,229,0.16);
       transition: transform .25s ease, box-shadow .25s ease;
       animation: pulseGlow 2.2s infinite alternate;
       text-decoration: none;
     }
-    .floating-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 18px 45px rgba(147,51,234,0.28); }
-    @keyframes pulseGlow { from { box-shadow: 0 6px 20px rgba(79,70,229,0.18);} to { box-shadow: 0 14px 40px rgba(147,51,234,0.26);} }
+    .floating-btn:hover { transform: translateY(-5px) scale(1.04); box-shadow: 0 20px 50px rgba(147,51,234,0.22); }
 
+    @keyframes pulseGlow { from { box-shadow: 0 10px 30px rgba(79,70,229,0.12);} to { box-shadow: 0 24px 60px rgba(147,51,234,0.22);} }
+
+    /* Theme toggle button */
     .theme-toggle {
-      position: fixed; left: 26px; bottom: 26px;
+      position: fixed; left: 28px; bottom: 28px;
       padding: 10px 16px; border-radius: 999px;
       background: linear-gradient(90deg,#9333EA,#4F46E5);
       color: #fff; font-weight:600; z-index:60;
-      box-shadow: 0 8px 28px rgba(79,70,229,0.18);
+      box-shadow: 0 10px 30px rgba(79,70,229,0.16);
       transition: transform .25s ease, box-shadow .25s ease;
       cursor: pointer;
+      border: none;
     }
-    .theme-toggle:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 18px 45px rgba(79,70,229,0.28); }
+    .theme-toggle:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 18px 45px rgba(79,70,229,0.22); }
 
-    /* Card hover lift */
-    .lift:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08); transition: all .35s ease; }
+    /* card hover lift */
+    .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08); transition: all .35s ease; }
 
-    /* ---------- DARK MODE OVERRIDES (use !important for reliability) ---------- */
-    /* We toggle 'dark-mode' on the html element for breadth + specificity */
-    html.dark-mode { background-color: #0b1220 !important; color: #e6eef8 !important; }
-    html.dark-mode body { background-color: #0b1220 !important; color: #e6eef8 !important; }
-
-    /* override bg-gray-50, bg-white, text colors etc */
-    html.dark-mode .bg-gray-50  { background-color: #071024 !important; }
-    html.dark-mode .bg-white    { background-color: #0f1724 !important; color: #e6eef8 !important; }
-    html.dark-mode .text-gray-800{ color: #e6eef8 !important; }
-    html.dark-mode .text-gray-500{ color: #9aa7bb !important; }
-    html.dark-mode .border-indigo-200{ border-color: rgba(167,139,250,0.12) !important; }
-
-    /* headings */
-    html.dark-mode h2, html.dark-mode h3 { color: #c7b3ff !important; }
-
-    /* links */
-    html.dark-mode a { color: #a78bfa !important; }
-
-    /* footer */
+    /* Dark-mode overrides on html for high specificity */
+    html.dark-mode { background: #071025 !important; color: #e6eef8 !important; }
+    html.dark-mode body { background: #071025 !important; color: #e6eef8 !important; }
+    html.dark-mode .bg-white { background-color: #0f1724 !important; color: #e6eef8 !important; }
+    html.dark-mode .text-gray-800 { color: #e6eef8 !important; }
+    html.dark-mode .text-gray-500 { color: #9aa7bb !important; }
+    html.dark-mode a { color: #A78BFA !important; }
+    html.dark-mode .border-indigo-200 { border-color: rgba(167,139,250,0.12) !important; }
     html.dark-mode footer { color: #9aa7bb !important; }
 
-    /* ensure shadows and hover effects still look good */
-    html.dark-mode .lift:hover { box-shadow: 0 18px 40px rgba(147,51,234,0.12) !important; transform: translateY(-6px) !important; }
-
-    /* force scrollbar color to match theme */
-    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 9px; }
     ::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#6366f1,#9333ea); border-radius: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 transition-all duration-300 overflow-x-hidden">
-  <div class="max-w-5xl mx-auto p-6">
 
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <main class="max-w-5xl mx-auto px-6 py-10">
     <!-- HEADER -->
-    <header class="text-center mb-10 fade-in">
+    <header class="text-center mb-10 fade-in" id="top">
       <h1 class="text-4xl md:text-5xl lg:text-5xl font-extrabold gradient-text">Hamna Mughal</h1>
-      <p class="text-md md:text-lg mt-2 font-medium">Computer Engineer | Researcher | AI Enthusiast</p>
-      <p class="mt-3 text-sm">
+      <p class="text-md md:text-lg mt-2 font-medium">Connectivity Researcher | Game Developer | GenAI Enthusiast</p>
+
+      <p class="mt-3 text-sm md:text-base">
         <a href="mailto:hamnamughalofficial@gmail.com" class="hover:underline">📧 hamnamughalofficial@gmail.com</a>
         <span class="mx-2">|</span>
         <a href="https://github.com/hamnamgl" target="_blank" class="hover:underline">🐙 github.com/hamnamgl</a>
@@ -101,146 +91,183 @@
     </header>
 
     <!-- OBJECTIVE -->
-    <section class="mb-10 fade-in">
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Objective</h2>
       <p>To dedicate my engineering skills toward building ethical, efficient, and human-centered technologies that positively impact humanity.</p>
     </section>
 
-    <!-- RESEARCH -->
-    <section class="mb-10 fade-in">
+    <!-- RESEARCH INTERESTS -->
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Research Interests</h2>
       <ul class="list-disc ml-6 space-y-1">
-        <li><strong>Wireless Communication Systems:</strong> Li-Fi, 5G/6G, low-latency comms, energy-efficiency, wireless body area networks.</li>
-        <li><strong>Embedded AI:</strong> Edge intelligence and real-time processing.</li>
-        <li><strong>Applications:</strong> Healthcare and Gaming.</li>
+        <li><strong>Wireless Communication Systems:</strong> Li-Fi Technology, 5G/6G technologies, computer networks, low-latency communication, energy-efficiency, wireless body area networks.</li>
+        <li><strong>Embedded AI:</strong> Edge intelligence, on-device inference, and real-time data processing.</li>
+        <li><strong>Applications:</strong> Healthcare systems, esports & gaming performance, and human-centered AI.</li>
       </ul>
     </section>
 
     <!-- EDUCATION -->
-    <section class="mb-10 fade-in">
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Education</h2>
-      <div class="bg-white p-4 rounded-2xl shadow lift">
+
+      <article class="bg-white p-5 rounded-2xl shadow card">
         <h3 class="text-xl font-bold">Bachelor of Science in Computer Engineering</h3>
-        <p class="italic">COMSATS University Islamabad, Attock Campus (Sep 2020 – Jul 2024)</p>
+        <p class="italic">COMSATS University Islamabad, Attock Campus — Sep 2020 – Jul 2024</p>
         <p>CGPA: 3.20 / 4.00</p>
-      </div>
+      </article>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section class="mb-10 fade-in">
+    <!-- PATENTS & PUBLICATIONS -->
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Patents & Publications</h2>
       <ul class="list-disc ml-6 space-y-3">
-        <li><strong>[C.1]</strong> Hamna Mughal, et al. (2024). <em>Optimizing Data Transfer in Hospitals using Li-Fi Technology.</em> Presented at ICCIS 2024 (Springer proceedings).</li>
-        <li><strong>[C.2]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Terahertz Communication’s Future Potential for Telemedicine.</em> To be presented at C-CODE 2025.</li>
-        <li><strong>[S.1]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Li-Fi in the 6G Era: Opportunities & Multiplexing Techniques.</em> Under review at ICIC 2025.</li>
-        <li><strong>[S.2]</strong> Hamna Mughal, et al. (2025). <em>Integrating Wi-Fi 7 & Edge AI for Esports Optimization.</em> Under review at Entertainment Computing.</li>
+        <li><strong>[C.1]</strong> Hamna Mughal, et al. (2024). <em>Optimizing Data Transfer in Hospitals using Li-Fi Technology.</em> Presented at ICCIS 2024 — Kohat University of Science and Technology. (Springer Proceedings)</li>
+        <li><strong>[C.2]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Terahertz Communication’s Future Potential for Impacting Telemedicine: A Visionary Perspective.</em> To be presented at C-CODE 2025.</li>
+        <li><strong>[S.1]</strong> Faiza Nawaz, Hamna Mughal, et al. (2025). <em>Li-Fi in the 6G Era: Opportunities, Challenges, and Advanced Multiplexing Techniques.</em> Under review at ICIC 2025.</li>
+        <li><strong>[S.2]</strong> Hamna Mughal, et al. (2025). <em>Integrating Wi-Fi 7 and Edge AI for Intelligent and Performance Optimized Esports Environments.</em> Under review at Entertainment Computing (Elsevier).</li>
       </ul>
     </section>
 
     <!-- PROJECTS -->
-    <section class="mb-10 fade-in">
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Projects</h2>
-      <div class="bg-white p-4 rounded-2xl shadow lift">
-        <h3 class="font-bold">Optimizing Data Transfer in Hospitals using Li-Fi (2023–2024)</h3>
-        <p><strong>Tools:</strong> Arduino Uno/Mega, Sensors, Arduino IDE, OMNeT++, MATLAB, Tinkercad, LaTeX</p>
+
+      <article class="bg-white p-5 rounded-2xl shadow mb-4 card">
+        <h3 class="font-bold text-lg">Optimizing Data Transfer in Hospitals using Li-Fi Technology (2023–2024)</h3>
+        <p class="mt-1"><strong>Tools:</strong> Arduino Uno/Mega, Sensors, Arduino IDE, OMNeT++, MATLAB, Tinkercad, LaTeX, Microsoft Project, Draw.io</p>
         <ul class="list-disc ml-6 mt-2">
-          <li>Designed Li-Fi healthcare communication system to improve speed, reliability and energy efficiency.</li>
-          <li>Integrated Arduino-based sensors (UART) for patient monitoring and validated in simulation (OMNeT++, MATLAB).</li>
-          <li>Prototype included solar support; tested at District Hospital Attock City. Selected for NGIRI Ignite & PEC FYDP Funding.</li>
+          <li>Designed and implemented Li-Fi based healthcare communication system to improve data throughput and reliability.</li>
+          <li>Integrated sensors with Arduino microcontrollers (UNO/Mega) using UART for serial data monitoring.</li>
+          <li>Applied SVD precoding and OOK keying to improve modulation efficiency and transmission security.</li>
+          <li>Simulated and validated system performance in OMNeT++ and MATLAB; prototyped circuits with solar-powered support.</li>
+          <li>Selected for NGIRI Ignite & PEC FYDP funding; pilot tested at District Hospital Attock City.</li>
         </ul>
-      </div>
+      </article>
+
+      <!-- Add other project summaries as needed (kept concise) -->
+      <article class="bg-white p-5 rounded-2xl shadow card">
+        <h3 class="font-bold text-lg">Prototype & Simulation Work (Various)</h3>
+        <p class="mt-1">Simulations and prototypes spanning wireless comms, edge AI inference pipelines, and low-latency communication optimizations using MATLAB, OMNeT++, and Arduino-based prototypes.</p>
+      </article>
     </section>
 
     <!-- SKILLS -->
-    <section class="mb-10 fade-in">
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Skills</h2>
       <div class="grid md:grid-cols-2 gap-4">
         <ul class="list-disc ml-6">
           <li><strong>Programming:</strong> C/C++, Python, Embedded C, C#, MATLAB</li>
           <li><strong>Databases:</strong> MySQL, SQL</li>
-          <li><strong>Embedded & Simulation:</strong> Arduino IDE, OMNeT++, NS-3, Cisco Packet Tracer</li>
+          <li><strong>Embedded & Simulation:</strong> Arduino IDE, OMNeT++, NS-3, Cisco Packet Tracer, Tinkercad</li>
         </ul>
         <ul class="list-disc ml-6">
-          <li><strong>Tools:</strong> Unity, LaTeX, Microsoft Project, Trello, Jira, Canva, Draw.io</li>
-          <li><strong>OS:</strong> Linux (Basic)</li>
-          <li><strong>Research:</strong> Data analysis, technical documentation</li>
+          <li><strong>Tools & Platforms:</strong> Unity, LaTeX, Microsoft Project, Trello, Jira, Canva, Draw.io</li>
+          <li><strong>OS:</strong> Linux (basic)</li>
+          <li><strong>Research:</strong> Observation, Data Analysis, Technical Documentation</li>
         </ul>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="mb-10 fade-in">
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Experience</h2>
       <div class="space-y-4">
-        <div class="bg-white p-4 rounded-2xl shadow lift">
+        <article class="bg-white p-4 rounded-2xl shadow card">
           <h3 class="font-bold">Researcher & Developer — Visyra</h3>
           <p class="italic">Apr 2025 – Present | Islamabad, Pakistan (Remote)</p>
-          <p>Working on multi-agent systems involving AI agents & social technologies.</p>
-        </div>
-        <div class="bg-white p-4 rounded-2xl shadow lift">
+          <p>Working on a Multi-Agent System project involving AI agents and social technologies; architecture, prototyping, and evaluations.</p>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow card">
           <h3 class="font-bold">Research Intern — AI-Explain You Science</h3>
           <p class="italic">Sep 2024 – Mar 2025 | Tunisia (Remote)</p>
-          <p>Literature review, documentation, and research support for AI + wireless projects.</p>
-        </div>
+          <p>Conducted literature reviews, managed research data, and supported AI & wireless technology initiatives.</p>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow card">
+          <h3 class="font-bold">Information Analyst Intern — MyUpdates24</h3>
+          <p class="italic">Sep 2024 – Oct 2024 | Delhi, India (Remote)</p>
+          <p>Analyzed qualitative information and created reports to support editorial and research decisions.</p>
+        </article>
+
+        <article class="bg-white p-4 rounded-2xl shadow card">
+          <h3 class="font-bold">AI/ML Fellow — ACM UET Lahore</h3>
+          <p class="italic">Jul 2024 – Aug 2024 | Lahore, Pakistan (Remote)</p>
+          <p>Hands-on projects and mentorship in AI/ML topics; collaborative research and prototyping.</p>
+        </article>
       </div>
     </section>
 
-    <!-- AWARDS -->
-    <section class="mb-10 fade-in">
+    <!-- HONORS & AWARDS -->
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Honors & Awards</h2>
       <ul class="list-disc ml-6 space-y-2">
-        <li>FYDP & NGIRI Ignite Funding (2024–2025) — PEC/NGIRI</li>
-        <li>Younger Researcher Award — ICETI (Oct 2024)</li>
-        <li>AI Seekho Season 6 Winner — Google Cloud Pakistan (Mar 2025)</li>
+        <li><strong>FYDP & NGIRI Ignite Funding (2024–2025):</strong> PEC / NGIRI — pilot tested at District Hospital Attock City.</li>
+        <li><strong>Younger Researcher Award (Oct 2024):</strong> 2nd ICETI, AIEYS.</li>
+        <li><strong>Certificate of Appreciation (Dec 2024):</strong> ICCIS 2024 Presenter.</li>
+        <li><strong>AI Seekho Season 6 — Swags Winner (Mar 2025):</strong> Google Cloud Pakistan.</li>
+        <li><strong>Registered Engineer (Nov 2024):</strong> Pakistan Engineering Council.</li>
       </ul>
     </section>
 
-    <!-- LEADERSHIP -->
-    <section class="mb-10 fade-in">
+    <!-- LEADERSHIP & COMMUNITY -->
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Leadership & Community</h2>
       <ul class="list-disc ml-6 space-y-2">
-        <li>Ambassador — AWS Cloud Club Pakistan, Web3 Pak</li>
-        <li>Media & Marketing Team Lead — YES, ACM UET Lahore</li>
-        <li>Contributor — GirlScript Summer of Code</li>
+        <li><strong>Facilitator Board Member & Ambassador:</strong> AWS Cloud Club Pakistan, Web3 Pak (Aug 2024 – Present)</li>
+        <li><strong>Media & Marketing Team Lead:</strong> YES COMSATS & ACM UET Lahore (Jan – May 2024)</li>
+        <li><strong>Video Editor & Executive Team Member:</strong> Tech Hierarchy & Dr Coders (Feb – Aug 2024)</li>
+        <li><strong>Contributor:</strong> GirlScript Summer of Code (Oct 2024 – Feb 2025)</li>
+        <li><strong>Volunteer:</strong> Dev Jirga (Sep – Nov 2024)</li>
       </ul>
     </section>
 
-    <!-- CERTS -->
-    <section class="mb-10 fade-in">
+    <!-- CERTIFICATIONS -->
+    <section class="mb-8 fade-in">
       <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Certifications</h2>
       <ul class="list-disc ml-6 space-y-1">
         <li>Generative AI Application Developer — Pakistan Engineering Council (Jun 2025)</li>
-        <li>Introduction to IoT — Stanford Online (Feb 2025)</li>
+        <li>Introduction to Internet of Things — Stanford Online (Feb 2025)</li>
+        <li>Foundations of IoT Systems & Industrial Automation — LearnQuest (Jan 2025)</li>
+        <li>Integrating Generative AI in Healthcare Innovations — IEEE EMBS SAC (Sep 2024)</li>
+        <li>Google Soft Skills Program — PAFLA (Jul 2024)</li>
         <li>Generative AI for Everyone — DeepLearning.AI (Jan 2024)</li>
       </ul>
     </section>
 
-    <footer class="text-center text-gray-500 text-sm mt-10 pb-4 fade-in">
-      © 2025 Hamna Mughal | Built with ❤️ and TailwindCSS
-    </footer>
-  </div>
+    <!-- ADDITIONAL INFO -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-1 mb-4">Additional Information</h2>
+      <p><strong>Languages:</strong> English (Working Proficiency), Urdu (Native), German (Elementary)</p>
+      <p class="mt-2"><strong>Interests:</strong> Game Development, Cybersecurity, Social Science × Technology, Generative AI</p>
+    </section>
 
-  <!-- THEME TOGGLE -->
+    <footer class="text-center text-gray-500 text-sm mt-10 pb-4 fade-in">
+      © 2025 Hamna Mughal | Built using TailwindCSS
+    </footer>
+  </main>
+
+  <!-- THEME TOGGLE BUTTON -->
   <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙 Dark Mode</button>
 
-  <!-- DOWNLOAD BUTTON (upload Hamna_Mughal_Resume.pdf to same repo folder) -->
+  <!-- DOWNLOAD BUTTON (upload 'Hamna_Mughal_Resume.pdf' to repo root) -->
   <a href="Hamna_Mughal_Resume.pdf" download class="floating-btn" aria-label="Download resume">📄 Download Resume</a>
 
+  <!-- JS: reveal animation + theme logic -->
   <script>
-    // --- Reveal on scroll ---
+    // Reveal on scroll
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('show');
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
     }, { threshold: 0.18 });
-    document.querySelectorAll('section, header, footer').forEach(el => observer.observe(el));
+    document.querySelectorAll('section, header, footer, article').forEach(el => observer.observe(el));
 
-    // --- Theme toggle (robust) ---
+    // Theme toggle & persistence (toggle on <html> for broad effect)
     const themeBtn = document.getElementById('themeToggle');
-    const htmlEl = document.documentElement; // toggle on html for broad reach
+    const htmlEl = document.documentElement;
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
 
-    // Helper to set theme
-    function applyTheme(isDark) {
+    function setTheme(isDark) {
       if (isDark) {
         htmlEl.classList.add('dark-mode');
         themeBtn.textContent = '☀️ Light Mode';
@@ -252,15 +279,11 @@
       }
     }
 
-    // Load saved preference, fallback to system preference
-    const saved = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Initial: saved > system > default light
+    if (saved === 'dark' || (!saved && prefersDark)) setTheme(true);
+    else setTheme(false);
 
-    if (saved === 'dark' || (!saved && systemPrefersDark)) applyTheme(true);
-    else applyTheme(false);
-
-    // Toggle handler
-    themeBtn.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark-mode')));
+    themeBtn.addEventListener('click', () => setTheme(!htmlEl.classList.contains('dark-mode')));
   </script>
 </body>
 </html>
